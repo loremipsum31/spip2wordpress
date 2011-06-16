@@ -1,0 +1,7 @@
+export with phpmyadmin
+add to localhost in command line ( create new database, grant privileges, flush )
+mysql -uusername -ppassword newdatabasename < original.sql
+mysqldump -u$1 -p$2 -c -e --default-character-set=latin1 --single-transaction --skip-set-charset --add-drop-database -B $3 > dump.sql
+sed 's/DEFAULT CHARACTER SET latin1/DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci/' <dump.sql | sed 's/DEFAULT CHARSET=latin1/DEFAULT CHARSET=utf8/' >dump-fixed.sql
+mysql -u$1 -p$2 --default-character-set=utf8 < dump-fixed.sql
+migrate with php script
