@@ -1,0 +1,10 @@
+label,
+input {
+	display:block;
+}
+label {
+	width:50%;
+	margin-top:2px;
+	font-weight:bold;
+}
+#csaw_et_admin_wrap { margin-left:5% }
