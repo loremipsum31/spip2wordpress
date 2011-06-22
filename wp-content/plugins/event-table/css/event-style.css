@@ -1,10 +1,22 @@
-label,
+a:hover, a:focus{
+outline: 1px dotted;
+}
+
 input {
-	display:block;
+	display:inline-block;
 }
 label {
-	width:50%;
+	width:20%;
 	margin-top:2px;
 	font-weight:bold;
+	display:block;
 }
+input[type="submit"] {display:block;}
 #csaw_et_admin_wrap { margin-left:5% }
+#active_events div { width:50% }
+
+#csaw_et_admin_wrap div.updated, 
+#csaw_et_admin_wrap div.error {
+	margin: 0 0 5px 0;
+	width:30%;
+}
