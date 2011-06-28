@@ -243,7 +243,7 @@ function csaw_et_table_type( $attr ) {
 		$count = 0;
 		foreach( $all_events_expert as $an_event_expert_paypal ) { 
 			$expert_item_date = str_replace( '-', '', $an_event_expert_paypal['event_date']);
-			$expert_paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_expert_paypal['event_type'].'&item_number='.$expert_item_date .'&amount='.$an_event_expert_paypal['event_cost'].'&currency_code=CA';
+			$expert_paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_expert_paypal['event_type'].'&item_number='.$expert_item_date .'&amount='.$an_event_expert_paypal['event_cost'].'&currency_code=CAD';
 			if( $count % 2 )
 				$nombre = 'odd';
 			else
@@ -279,7 +279,7 @@ function csaw_et_table_type( $attr ) {
 		$count = 0;
 		foreach( $all_events_wcag as $an_event_wcag_paypal ) { 
 			$item_date = str_replace( '-', '', $an_event_wcag_paypal['event_date']);
-			$paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_wcag_paypal['event_type'].'&item_number='.$item_date .'&amount='.$an_event_wcag_paypal['event_cost'].'&currency_code=CA';
+			$paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_wcag_paypal['event_type'].'&item_number='.$item_date .'&amount='.$an_event_wcag_paypal['event_cost'].'&currency_code=CAD';
 			if( $count % 2 )
 				$nombre = 'odd';
 			else
