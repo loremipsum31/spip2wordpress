@@ -19,151 +19,169 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: event-table.php:82
+#: event-table.php:88
 #@ event-table
 msgid "Events to Table"
 msgstr "Des événements dans une table"
 
-#: event-table.php:82
+#: event-table.php:88
 #@ event-table
 msgid "Events"
 msgstr "Événements"
 
-#: event-table.php:87
+#: event-table.php:99
 #@ event-table
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n'avez pas les autorisations suffisantes pour accéder à cette page."
 
-#: event-table.php:111
+#: event-table.php:123
 #@ event-table
 msgid "Unfortunately something went wrong..."
 msgstr "Malheureusement quelque chose ne fonctionne pas ..."
 
-#: event-table.php:114
+#: event-table.php:126
 #@ event-table
 msgid "The event was succesfully added!"
 msgstr "L'événement a été ajouté avec succès!"
 
-#: event-table.php:118
+#: event-table.php:130
 #@ event-table
 msgid "Type of Event"
 msgstr "Type de l'événement"
 
-#: event-table.php:120
+#: event-table.php:132
 #@ event-table
 msgid "Expert"
 msgstr "Expert"
 
-#: event-table.php:123
-#: event-table.php:206
-#: event-table.php:221
+#: event-table.php:135
+#: event-table.php:227
+#: event-table.php:242
+#: event-table.php:259
+#: event-table.php:278
 #@ event-table
 msgid "Date"
 msgstr "Date"
 
-#: event-table.php:125
+#: event-table.php:137
 #@ default
 msgid "Title"
 msgstr ""
 
-#: event-table.php:127
-#: event-table.php:221
+#: event-table.php:141
+#: event-table.php:259
+#: event-table.php:278
 #@ event-table
 msgid "City"
 msgstr "Ville"
 
-#: event-table.php:129
-#: event-table.php:221
+#: event-table.php:143
+#: event-table.php:259
+#: event-table.php:278
 #@ event-table
 msgid "Language"
 msgstr "Langue"
 
-#: event-table.php:131
+#: event-table.php:145
 #@ event-table
 msgid "French"
 msgstr "français"
 
-#: event-table.php:132
+#: event-table.php:146
 #@ event-table
 msgid "English"
 msgstr "anglais"
 
-#: event-table.php:134
-#: event-table.php:221
+#: event-table.php:139
+#: event-table.php:259
+#: event-table.php:278
 #@ event-table
 msgid "Cost"
 msgstr "Coûts"
 
-#: event-table.php:137
+#: event-table.php:149
 #@ event-table
 msgid "Submit event"
 msgstr "Soumettre un événement"
 
-#: event-table.php:137
+#: event-table.php:149
 #@ default
 msgid "Submit"
 msgstr ""
 
-#: event-table.php:161
+#: event-table.php:172
 #@ event-table
 msgid "Active Events:"
 msgstr "Événements courants :"
 
-#: event-table.php:165
+#: event-table.php:176
 #@ event-table
 msgid "Unfortunately the event could not be deleted..."
 msgstr "Malheureusement, l&#39;événement ne pourrait être supprimée ..."
 
-#: event-table.php:168
+#: event-table.php:179
 #@ event-table
 msgid "The event was succesfully deleted!"
 msgstr "L&#39;événement a été supprimé avec succès!"
 
-#: event-table.php:175
-#: event-table.php:179
+#: event-table.php:186
+#: event-table.php:190
 #@ event-table
 msgid "Type of Event:"
 msgstr "Type d&#39;événement :"
 
-#: event-table.php:176
-#: event-table.php:180
+#: event-table.php:187
+#: event-table.php:191
 #@ event-table
 msgid "Date:"
 msgstr "Date :"
 
-#: event-table.php:177
-#: event-table.php:181
+#: event-table.php:188
+#: event-table.php:192
 #@ default
 msgid "Title:"
 msgstr ""
 
-#: event-table.php:182
+#: event-table.php:193
 #@ event-table
 msgid "City:"
 msgstr "Ville :"
 
-#: event-table.php:183
+#: event-table.php:194
 #@ event-table
 msgid "Language:"
 msgstr "Langue :"
 
-#: event-table.php:184
+#: event-table.php:195
 #@ event-table
 msgid "Cost:"
 msgstr "Coût :"
 
-#: event-table.php:186
+#: event-table.php:197
 #@ default
 msgid "Delete"
 msgstr ""
 
-#: event-table.php:206
+#: event-table.php:227
+#: event-table.php:242
 #@ event-table
 msgid "Theme"
 msgstr "Thématique"
 
-#: event-table.php:108
+#: event-table.php:120
 #@ event-table
 msgid "Event to Table"
 msgstr "Un événement dans une table"
+
+#: event-table.php:242
+#: event-table.php:278
+#@ event-table
+msgid "Register"
+msgstr "Inscrivez-vous"
+
+#: event-table.php:251
+#: event-table.php:291
+#@ event-table
+msgid "Register Now with Paypal"
+msgstr "Inscrivez-vous maintenant avec Paypal"
 
