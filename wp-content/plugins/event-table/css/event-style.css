@@ -1,18 +1,16 @@
-a:hover, a:focus{
-outline: 1px dotted;
-}
+#csaw_et_admin_wrap a:hover, a:focus{ outline: 1px dotted; }
+#csaw_et_admin_wrap input { display:inline-block; }
+#csaw_et_admin_wrap input[type="submit"] { display:block; }
 
-input {
-	display:inline-block;
-}
-label {
+#csaw_et_admin_wrap label {
 	width:20%;
 	margin-top:2px;
 	font-weight:bold;
 	display:block;
 }
-input[type="submit"] {display:block;}
+
 #csaw_et_admin_wrap { margin-left:5% }
+
 #active_events div { width:50% }
 
 #csaw_et_admin_wrap div.updated, 

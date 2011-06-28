@@ -49,7 +49,7 @@ function csaw_et_install(){
 		`event_type` VARCHAR(10) NOT NULL,
 		`event_city` VARCHAR(40) NULL,
 		`event_language` VARCHAR(10) NULL,
-		`event_cost` VARCHAR(10) NULL,
+		`event_cost` INT(11) NOT NULL,
 		PRIMARY KEY (`event_id`)
 		) CHARSET=utf8";
 
@@ -70,7 +70,7 @@ function csaw_et_install(){
 		`event_type` VARCHAR(10) NOT NULL,
 		`event_city` VARCHAR(40) NULL,
 		`event_language` VARCHAR(10) NULL,
-		`event_cost` VARCHAR(10) NULL,
+		`event_cost` INT(11) NOT NULL,
 		PRIMARY KEY (`event_id`)
 		)CHARSET=utf8";
 
@@ -136,6 +136,8 @@ function csaw_et_options() {
 		<input type="text" class="w8em format-y-m-d divider-dash highlight-days-12" id="event_date" name="event_date" value="" />
 		<label for="event_title"><?php _e('Title'); ?></label> 
 		<input type="text" id="event_title" name="event_title" />
+		<label for="event_cost"><?php _e('Cost', 'event-table'); ?></label> 
+		<input type="text" id="event_cost" name="event_cost" />
 		<label class="wcag" for="event_city"><?php _e('City', 'event-table'); ?></label> 
 		<input type="text" id="event_city" name="event_city" />
 		<label class="wcag" for="event_language"><?php _e('Language', 'event-table'); ?></label> 
@@ -143,8 +145,6 @@ function csaw_et_options() {
 				<option value="français" selected="selected"><?php _e('French', 'event-table'); ?></option>
 				<option value="English"><?php _e('English', 'event-table'); ?></option>
 			</select>		
-		<label class="wcag" for="event_cost"><?php _e('Cost', 'event-table'); ?></label> 
-		<input type="text" id="event_cost" name="event_cost" />
 		
 		<input name="store_event_table" type="submit" title="<?php _e('Submit event', 'event-table'); ?>" value="<?php _e('Submit'); ?>" />
 		</form>
@@ -237,6 +237,23 @@ function csaw_et_table_type( $attr ) {
 		$expert_table .= "</table>";
 		return $expert_table;
 	}
+	if( $attr['type'] == 'expert-paypal' ) {
+		$expert_paypal_table = "<table id='expert'>
+		<tr><th>".__('Date', 'event-table')."</th><th>".__('Theme', 'event-table')."</th><th>".__('Register', 'event-table')."</th></tr>";
+		$count = 0;
+		foreach( $all_events_expert as $an_event_expert_paypal ) { 
+			$expert_item_date = str_replace( '-', '', $an_event_expert_paypal['event_date']);
+			$expert_paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_expert_paypal['event_type'].'&item_number='.$expert_item_date .'&amount='.$an_event_expert_paypal['event_cost'].'&currency_code=CA';
+			if( $count % 2 )
+				$nombre = 'odd';
+			else
+				$nombre = 'even';
+			$expert_paypal_table .= '<tr class="'.$nombre.'"><td>'.$an_event_expert_paypal['event_date'].'</td><td>'.$an_event_expert_paypal['event_title'].'</td><a href="'.$expert_paypal_link.'">'.__('Register Now with Paypal', 'event-table').'</a></tr>';
+			$count++;
+		}
+		$expert_paypal_table .= "</table>";
+		return $expert_paypal_table;
+	}
 	if( $attr['type'] == 'wcag' ) {
 		$wcag_table = "<table id='wcag'>
 		<tr><th>".__('Date', 'event-table')."</th><th>".__('City', 'event-table')."</th><th>".__('Language', 'event-table')."</th><th>".__('Cost', 'event-table')."</th></tr>";
@@ -250,12 +267,33 @@ function csaw_et_table_type( $attr ) {
 				$lang = 'fr-FR';
 			if( $an_event_wcag['event_language'] == 'English' ) 
 				$lang = 'en-CA';	
-			$wcag_table .= '<tr class="'.$nombre.'"><td>'.$an_event_wcag['event_date'].'</td><td>'.$an_event_wcag['event_city'].'</td><td lang="'.$lang.'">'.$an_event_wcag['event_language'].'</td><td>'.$an_event_wcag['event_cost'].'</td></tr>';
+			$wcag_table .= '<tr class="'.$nombre.'"><td>'.$an_event_wcag['event_date'].'</td><td>'.$an_event_wcag['event_city'].'</td><td lang="'.$lang.'">'.$an_event_wcag['event_language'].'</td><td> $'.$an_event_wcag['event_cost'].'</td></tr>';
 			$count++;
 		}
 		$wcag_table .= "</table>";
 		return $wcag_table;		
 	}
+	if( $attr['type'] == 'wcag-paypal' ) {
+		$wcag_paypal_table = "<table id='wcag_paypal'>
+		<tr><th>".__('Date', 'event-table')."</th><th>".__('City', 'event-table')."</th><th>".__('Language', 'event-table')."</th><th>".__('Cost', 'event-table')."</th><th>".__('Register', 'event-table')."</th></tr>";
+		$count = 0;
+		foreach( $all_events_wcag as $an_event_wcag_paypal ) { 
+			$item_date = str_replace( '-', '', $an_event_wcag_paypal['event_date']);
+			$paypal_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@accessibiliteweb.com&item_name='.$an_event_wcag_paypal['event_type'].'&item_number='.$item_date .'&amount='.$an_event_wcag_paypal['event_cost'].'&currency_code=CA';
+			if( $count % 2 )
+				$nombre = 'odd';
+			else
+				$nombre = 'even';
+			if( $an_event_wcag_paypal['event_language'] == 'français' ) 
+				$lang = 'fr-FR';
+			if( $an_event_wcag_paypal['event_language'] == 'English' ) 
+				$lang = 'en-CA';	
+			$wcag_paypal_table .= '<tr class="'.$nombre.'"><td>'.$an_event_wcag_paypal['event_date'].'</td><td>'.$an_event_wcag_paypal['event_city'].'</td><td lang="'.$lang.'">'.$an_event_wcag_paypal['event_language'].'</td><td> $'.$an_event_wcag_paypal['event_cost'].'</td><td><a href="'.$paypal_link.'">'.__('Register Now with Paypal', 'event-table').'</a></td></tr>';
+			$count++;
+		}
+		$wcag_paypal_table .= "</table>";
+		return $wcag_paypal_table;	
+	}	
 }
 add_shortcode( 'events_table', 'csaw_et_table_type' );
 
