@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
- ******************************* VERSION 1 ****************************
+ ******************************* VERSION 1.1 **************************
  **********************************************************************
  *************************** SELECT FROM SPIP *************************
  * The SPIP installation and the WordPress installation must be on the 
@@ -52,7 +52,8 @@ while($row = mysql_fetch_array($result_spip_articles))
 		$texte = mysql_real_escape_string($contenu_correct);
 	
 	$titre = mysql_real_escape_string($row['titre']);
-	$chapo = mysql_real_escape_string($row['chapo']);
+	$excerpt_no_images = suppression_images($row['chapo']);
+	$chapo = mysql_real_escape_string($excerpt_no_images);
 	
 	if($row['id_rubrique'] == 103)
 		$publier = 'draft';
@@ -181,7 +182,7 @@ AND
 $result_spip_categories = mysql_query($query_spip_categories) or die(mysql_error());
 
 $term_rows = array('(3,"AccessiVeille","accessiveille")');
-$term_taxonomy_rows = array('(3,3,"category",62)');
+$term_taxonomy_rows = array('(3,3,"category",54)');
 while($cat_row = mysql_fetch_array($result_spip_categories))
 {
 	$term_id 				= $cat_row['id_rubrique'];
@@ -336,17 +337,40 @@ function remplacer_spip($str_SPIP){
 	return $contenu_sans_spip;
 }
 
+/* Supprimer les images des extraits */
+function suppression_images($extrait){
+	$imgSPIP = array("#(<p><img)([^\]]+)(/></p>)#", "#(<img)([^\]]+)(/>)#");
+	$noHTML = array("", "");
+	$extrait_sans_images = preg_replace($imgSPIP , $noHTML, $extrait);
+	return $extrait_sans_images;
+}
+
 /* Obtenir la somme des commentaires par article */
 function get_comment_count_article($article_id){
-	$comment_count_query = "SELECT COUNT(*) FROM spip_forum WHERE spip_forum.id_article = '.$article_id.' AND spip_forum.statut LIKE 'publie'";
+	$comment_count_query = "SELECT COUNT(*) FROM spip_forum 
+									WHERE 
+										spip_forum.id_article = '.$article_id.' 
+									AND 
+										spip_forum.statut LIKE 'publie'
+							";
 	$result_comment_count = mysql_query($comment_count_query) or die(mysql_error());
 	while($row_comment_count = mysql_fetch_array($result_comment_count))
 		{return $row_comment_count[0];}	
 }
 
-/* Obtenir la somme des commentaires par article */
+/* Obtenir la somme des category par article */
 function get_taxonomy_count($taxonomy_id){
-	$term_taxonomy_count_query = "SELECT COUNT(*) FROM spip_articles WHERE spip_articles.id_rubrique = ".$taxonomy_id;
+	$term_taxonomy_count_query = "SELECT COUNT(*) 
+									FROM spip_articles 
+									WHERE 
+										spip_articles.id_rubrique = ".$taxonomy_id." 
+									AND 
+										spip_articles.statut LIKE 'publie'
+									AND 
+										spip_articles.titre NOT LIKE '%Infolettre%'
+									AND 
+										spip_articles.titre NOT LIKE '%AccessiVeille%'
+								";
 	$result_term_taxonomy_count = mysql_query($term_taxonomy_count_query) or die(mysql_error());
 	while($row_term_taxonomy_count = mysql_fetch_array($result_term_taxonomy_count))
 		{return $row_term_taxonomy_count[0];}
@@ -496,6 +520,11 @@ foreach ($term_relationships_rows as $term_relationships_row) {
 } 
 /* END Insert Terms Relationship */
 
+mysql_free_result($result_spip_articles);
+mysql_free_result($result_spip_categories);
+mysql_free_result($result_spip_categories_articles);
+mysql_free_result($result_spip_comments);
+mysql_free_result($result_spip_users);
 mysql_close($link_to_spip);
 mysql_close($link_to_wordpress);
 ?>
