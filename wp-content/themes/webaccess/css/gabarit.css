@@ -5,7 +5,7 @@
 /* Multi Edit blocks */
 #middle.custom #content #top-right { display: inline; }
 
-.home #middle.custom #content #left { 
+.home #middle.custom #content #left-block { 
 	clear: both;
     float: left;
     width: 250px;
@@ -18,7 +18,7 @@
 	float:left; 
 	display: inline;
 }
-.home #middle.custom #content #right { 
+.home #middle.custom #content #right-block { 
 	width:240px; 
 	padding:0 0 0 10px; 
 	float:left; 
@@ -27,7 +27,7 @@
     top: -20px;
 }
 
-.page-template-custom-page-php #middle.custom #content #left { 
+.page-template-custom-page-php #middle.custom #content #left-block { 
 	clear: both;
     float: left;
     width: 250px;
@@ -44,7 +44,7 @@
     position: relative;
     top: -65px;	
 }
-.page-template-custom-page-php #middle.custom #content #right { 
+.page-template-custom-page-php #middle.custom #content #right-block { 
 	width:240px; 
 	padding:0 0 0 10px; 
 	float:left; 

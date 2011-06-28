@@ -91,7 +91,7 @@ px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
 	width: 896px;
-	padding: 72px 48px 84px;
+	padding: 0 48px 84px;
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
@@ -111,13 +111,13 @@ px      68    160    252    344    436    528    620    712    */
 		width: 712px;
 		padding: 48px 28px 60px;
 	}
-	.home #middle.custom #content #right,
-	.page-template-custom-page-php #middle.custom #content #right  {
+	.home #middle.custom #content #right-block,
+	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
 	}
-	.home #middle.custom #content #left,
-	.page-template-custom-page-php #middle.custom #content #left,
+	.home #middle.custom #content #left-block,
+	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;
@@ -140,13 +140,13 @@ px      68    160    252    */
 		width: 252px;
 		padding: 48px 34px 60px;
 	}
-	.home #middle.custom #content #right,
-	.page-template-custom-page-php #middle.custom #content #right  {
+	.home #middle.custom #content #right-block,
+	.page-template-custom-page-php #middle.custom #content #right-block  {
 		clear:left;
 		padding:0;
 	}
-	.home #middle.custom #content #left,
-	.page-template-custom-page-php #middle.custom #content #left,
+	.home #middle.custom #content #left-block,
+	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 		top: 0;
@@ -178,13 +178,13 @@ px      68    160    252    344    436    */
 		width: 436px;
 		padding: 36px 22px 48px;
 	}
-	.home #middle.custom #content #right,
-	.page-template-custom-page-php #middle.custom #content #right  {
+	.home #middle.custom #content #right-block,
+	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
 	}
-	.home #middle.custom #content #left,
-	.page-template-custom-page-php #middle.custom #content #left,
+	.home #middle.custom #content #left-block,
+	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;
@@ -205,13 +205,13 @@ px      68    160    252    344    436    */
 	body {
 	
 	}
-	.home #middle.custom #content #right,
-	.page-template-custom-page-php #middle.custom #content #right  {
+	.home #middle.custom #content #right-block,
+	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
 	}
-	.home #middle.custom #content #left,
-	.page-template-custom-page-php #middle.custom #content #left,
+	.home #middle.custom #content #left-block,
+	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;

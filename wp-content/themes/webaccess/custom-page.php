@@ -1,7 +1,7 @@
 <?php 
 /**
  * Template Name: Custom Page
- * MultiEdit: Left,Middle,Right,TopRight
+ * MultiEdit: TopRight,Left,Middle,Right
  */
  
 get_header(); ?>
@@ -19,9 +19,9 @@ get_header(); ?>
 				</div> 
 			</div><!-- end post-ID -->
 		<div id="top-right"><?php multieditDisplay('TopRight'); ?></div>
-		<div id="left"><?php multieditDisplay('Left'); ?></div>
+		<div id="left-block"><?php multieditDisplay('Left'); ?></div>
 		<div id="middle-block"><?php multieditDisplay('Middle'); ?></div>
-		<div id="right"><?php multieditDisplay('Right'); ?></div>
+		<div id="right-block"><?php multieditDisplay('Right'); ?></div>
 
 		<?php if (is_user_logged_in()) : ?>
 			<!-- 	

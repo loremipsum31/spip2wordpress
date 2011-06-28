@@ -17,9 +17,9 @@ get_header(); ?>
 				<?php endwhile; endif; ?><!--end of post and end of loop-->
 				</div> 
 			</div><!-- end post-ID --> 
-			<div id="left"><?php multieditDisplay('Left'); ?></div>
+			<div id="left-block"><?php multieditDisplay('Left'); ?></div>
 			<div id="middle-block"><?php multieditDisplay('Middle'); ?></div>
-			<div id="right"><?php multieditDisplay('Right'); ?></div>
+			<div id="right-block"><?php multieditDisplay('Right'); ?></div>
 			
 			<?php if (is_user_logged_in()) : ?>
 				<!-- 	

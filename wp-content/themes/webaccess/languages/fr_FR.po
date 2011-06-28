@@ -29,54 +29,39 @@ msgstr "Résultats pour"
 msgid "Blog Archives"
 msgstr "Archives blogue"
 
-#: functions.php:222
+#: functions.php:244
 #@ webaccess
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: header.php:27
+#: header.php:37
 #@ webaccess
 msgid "Go to content"
 msgstr "Aller au contenu"
 
-#: header.php:27
+#: header.php:37
 #@ webaccess
 msgid "Skip to content"
 msgstr "Passer au contenu"
 
-#: sidebar.php:30
-#: single.php:34
+#: sidebar.php:62
+#: single.php:45
 #@ default
 msgid "Categories"
 msgstr "Catégories"
 
-#: sidebar.php:60
+#: sidebar.php:38
 #@ default
 msgid "Archives"
 msgstr "Archives"
 
-#: sidebar.php:67
-#@ webaccess
-msgid "Blogroll"
-msgstr "Blogoliste"
-
-#: sidebar.php:24
-#: single.php:29
+#: sidebar.php:52
+#: single.php:40
 #@ default
 msgid "Category"
 msgstr ""
 
-#: header.php:67
-#@ default
-msgid "Home"
-msgstr ""
-
-#: footer.php:13
-#@ default
-msgid "RSS"
-msgstr ""
-
-#: functions.php:216
+#: functions.php:238
 #, php-format
 #@ default
 msgid "%1$s at %2$s"
@@ -118,10 +103,7 @@ msgstr "Archive(s) pour l'an"
 msgid "Post(s) archived with the tag"
 msgstr "Article(s) étiquetté(s) avec le mot-clef"
 
-#: archive.php:32
-#: index.php:11
 #: search.php:13
-#: single.php:10
 #@ webaccess
 msgid "Published by"
 msgstr "Publié par"
@@ -131,30 +113,28 @@ msgstr "Publié par"
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Cet article est protégé. Entrez le mot de passe pour voir tous les commentaires."
 
-#: comments.php:17
+#: comments.php:30
 #@ webaccess
 msgid "The post"
 msgstr "L'article"
 
-#: comments.php:36
+#: comments.php:19
 #, php-format
 #@ webaccess
 msgid "Your comment will be published as <a href=\"%1$s\">%2$s</a>."
 msgstr "Votre commentaire sera publié avec le pseudonyme <a href=\"%1$s\">%2$s</a>."
 
-#: comments.php:41
+#: comments.php:24
 #@ webaccess
 msgid "Submit your Comment"
 msgstr "Laisser votre commentaire"
 
-#: functions.php:29
-#: functions.php:40
-#: sidebar.php:27
+#: sidebar.php:56
 #@ webaccess
 msgid "post"
 msgstr "article"
 
-#: functions.php:182
+#: functions.php:201
 #@ webaccess
 msgid "Continue reading the article"
 msgstr "Continuer la lecture de l'article"
@@ -179,56 +159,53 @@ msgstr " n'ont pas été retrouvés. S'il vous plaît essayer un autre terme de 
 msgid "Sidebar"
 msgstr "Boîte à outil"
 
-#: sidebar.php:53
-#: single.php:52
+#: sidebar.php:30
+#: single.php:63
 #@ default
 msgid "Tags"
 msgstr ""
 
-#: sidebar.php:75
-#@ webaccess
-msgid "Administration"
-msgstr "Administration"
-
-#: single.php:75
+#: single.php:79
 #@ webaccess
 msgid "You can trackback from your own site."
 msgstr "Vous pouvez faire un rétrolien vers votre blogue."
 
-#: archive.php:62
-#: index.php:43
+#: archive.php:55
+#: index.php:40
 #: search.php:46
-#: single.php:64
+#: single.php:75
 #@ webaccess
 msgid "Edit the post"
 msgstr "Modifier l'article"
 
-#: comments.php:17
+#: comments.php:30
 #@ webaccess
 msgid "has no comments"
 msgstr "n'a pas de commentaire"
 
-#: comments.php:17
+#: comments.php:30
 #@ webaccess
 msgid "has one comment"
 msgstr "a un commentaire"
 
-#: comments.php:17
+#: comments.php:30
 #@ webaccess
 msgid "has % comments"
 msgstr "a % commentaires"
 
+#: custom-page.php:32
+#: front-page.php:30
 #: page.php:18
 #@ webaccess
 msgid "Edit the page"
 msgstr "Modifier la page"
 
-#: comments.php:37
+#: comments.php:20
 #@ default
 msgid "Comment"
 msgstr ""
 
-#: comments.php:39
+#: comments.php:22
 #, php-format
 #@ default
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
@@ -239,34 +216,36 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:28
-#: functions.php:39
+#: sidebar.php:58
 #@ default
 msgid "posts"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:236
 #@ webaccess
 msgid "Comment by"
 msgstr "Commentaire par"
 
-#: functions.php:239
+#: functions.php:261
 #@ webaccess
 msgid "Edit comment"
 msgstr "Modifier commentaire"
 
-#: functions.php:240
+#: archive.php:32
+#: functions.php:262
+#: index.php:15
+#: single.php:18
 #@ webaccess
 msgid "by"
 msgstr "par"
 
-#: functions.php:216
-#: functions.php:240
+#: functions.php:238
+#: functions.php:262
 #@ webaccess
 msgid "published on"
 msgstr "publié le"
 
-#: functions.php:257
+#: functions.php:279
 #@ webaccess
 msgid "Reply to comment"
 msgstr "Répondre au commentaire"
@@ -277,58 +256,78 @@ msgstr "Répondre au commentaire"
 msgid "Search"
 msgstr ""
 
-#: sidebar.php:27
+#: sidebar.php:59
 #, php-format
 #@ default
 msgid "View all posts in %s"
 msgstr ""
 
-#: sidebar.php:48
-#: single.php:49
+#: sidebar.php:25
+#: single.php:60
 #@ default
 msgid "Tag"
 msgstr ""
 
-#: archive.php:37
-#: functions.php:240
-#: index.php:16
+#: functions.php:262
 #: search.php:18
-#: single.php:16
+#: single.php:22
 #@ webaccess
 msgid "at"
 msgstr "à"
 
-#: archive.php:35
-#: index.php:14
 #: search.php:16
-#: single.php:14
 #@ webaccess
 msgid "the"
 msgstr "le"
 
-#: archive.php:56
-#: index.php:33
+#: archive.php:49
+#: index.php:30
 #: search.php:35
 #@ webaccess
 msgid "No comments for the post"
 msgstr "Aucun commentaire pour l'article"
 
-#: archive.php:56
-#: index.php:33
+#: archive.php:49
+#: index.php:30
 #: search.php:35
 #@ webaccess
 msgid "1 comment for the post"
 msgstr "1 commentaire pour l'article"
 
-#: archive.php:56
-#: index.php:33
+#: archive.php:49
+#: index.php:30
 #: search.php:35
 #@ webaccess
 msgid "% comments for the post"
 msgstr "% commentaires pour l'article"
 
-#: functions.php:22
+#: functions.php:29
 #@ webaccess
 msgid "Primary Navigation"
 msgstr "Navigation principale"
+
+#: footer.php:4
+#@ default
+msgid "Accessibility"
+msgstr ""
+
+#: footer.php:4
+#@ default
+msgid "Site Map"
+msgstr ""
+
+#: functions/pagination.php:41
+#@ default
+msgid "Pages:"
+msgstr ""
+
+#: functions/pagination.php:42
+#@ webaccess
+msgid "Next"
+msgstr "Suivant"
+
+#: functions/pagination.php:42
+#@ webaccess
+msgid "Previous"
+msgstr "Précédent"
 
