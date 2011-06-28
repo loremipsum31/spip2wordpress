@@ -1,0 +1,7 @@
+#skip, #sidebar, #navigation, #comments #respond { display:none; }
+
+#navigation, #footer, #sidebar, #content { border:0;}
+
+#footer {  text-align:left; padding-top:10px; }
+
+#content { width:100%; margin:0; padding:0;}

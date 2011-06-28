@@ -1,0 +1,55 @@
+#middle.custom #content { width:100%; margin-right:0; padding:0  }
+
+#middle.custom #content .page { float:left; display: inline; width: 60%;}
+
+/* Multi Edit blocks */
+#middle.custom #content #top-right { display: inline; }
+
+.home #middle.custom #content #left { 
+	clear: both;
+    float: left;
+    width: 250px;
+    padding:0 20px 0 0;
+    display: inline;
+}
+.home  #middle.custom #content #middle-block { 
+	width:250px; 
+	padding:0 10px; 
+	float:left; 
+	display: inline;
+}
+.home #middle.custom #content #right { 
+	width:240px; 
+	padding:0 0 0 10px; 
+	float:left; 
+	display: inline; 
+	position: relative;
+    top: -20px;
+}
+
+.page-template-custom-page-php #middle.custom #content #left { 
+	clear: both;
+    float: left;
+    width: 250px;
+    padding:0 20px 0 0;
+    display: inline;
+    position: relative;
+    top: -65px;
+}
+.page-template-custom-page-php  #middle.custom #content #middle-block { 
+	width:250px; 
+	padding:0 10px; 
+	float:left; 
+	display: inline;
+    position: relative;
+    top: -65px;	
+}
+.page-template-custom-page-php #middle.custom #content #right { 
+	width:240px; 
+	padding:0 0 0 10px; 
+	float:left; 
+	display: inline; 
+}
+
+.home .edit-link,
+.page-template-custom-page-php .edit-link { clear: both; float: left; }

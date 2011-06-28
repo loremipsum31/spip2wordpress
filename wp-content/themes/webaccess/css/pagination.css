@@ -1,0 +1,16 @@
+/*
+ * emm_paginate - WordPress Pagination Function
+ * Version: 1.0
+ *
+ * Copyright (c) 2009 Eric Martin http://www.ericmmartin.com/
+ * Link: http://www.ericmmartin.com/pagination-function-for-wordpress
+ *
+ */
+.emm-paginate {margin: 10px 0;}
+.emm-paginate a {background:#ddd; border:1px solid #ccc; color:#666; margin-right:4px; padding:3px 6px; text-align:center; text-decoration:none;}
+.emm-paginate a:hover, .emm-paginate a:active {background:#ccc; color:#888;}
+.emm-paginate .emm-title {color:#555; margin-right:4px;}
+.emm-paginate .emm-gap {color:#999; margin-right:4px;}
+.emm-paginate .emm-current {color:#fff; background:#5f87ae; border:1px solid #89adcf; margin-right:4px; padding:3px 6px;}
+.emm-paginate .emm-page {}
+.emm-paginate .emm-prev, .emm-paginate .emm-next {}

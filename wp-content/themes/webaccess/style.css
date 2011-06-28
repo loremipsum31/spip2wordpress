@@ -1,0 +1,130 @@
+/*
+Theme Name: Web Access
+Theme URI: http://accessibiliteweb.com/themes/webaccess
+Description: An accessible theme for WordPress following the SGQRI-008 standards.
+Author: AccessibilitéWeb
+Author URI: http://accessibiliteweb.com/
+Version: 1.0
+Tags: accessibility, standards, sgqri, two-columns, threaded-comments, translation-ready, editor-style
+
+License: GNU General Public License (GPL) version 3
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+@charset "UTF-8";
+@import url("css/gabarit.css");
+@import url("css/pagination.css");
+
+html, body, blockquote, pre, abbr, acronym, address, code,
+em, img, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	margin: 0 auto;
+}
+ul li, ol li { list-style:inside; }
+a { text-decoration:underline; color: #444; }
+ul li a:hover, ul li a:focus  { color:#666; }
+
+blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
+
+#container { width: 100%; font-size:1.4em; margin:0 auto; }
+
+#header { margin:0; padding:0 }
+#header a { text-decoration:none; }
+#header a:hover, #header a:focus { color:#666; }
+#header img { vertical-align:middle; }
+#header h1 { margin:0; }
+#sitename { float: left; }
+#sitedescription { float:left; margin: 45px 0 0 10px; }
+
+#navigation{ clear:left; }
+#navigation ul{ list-style:none; }
+#navigation ul li a { font-size:1.4em; }
+#navigation ul li{
+	list-style:none;
+	display:inline;
+	font-weight:bold;
+	padding:0 .2em;
+}
+
+#middle { float: left; width:100%; }
+#content { margin-right:18em; }
+#content p, #content li { line-height: 1.4em; }
+#content h2 { margin: 14px 0 7px;}
+
+#sidebar { float: left; margin-left: -19em; width: 18.8em;  font-size:0.9em; }
+#sidebar #search { margin-bottom:20px; }
+#sidebar input[type=text] { width: 80%; }
+#sidebar .title { font-weight:bold; margin:20px 0 5px 0; font-size:1.2em; }
+#sidebar p { margin:0;}
+#sidebar ul li { list-style:none;}
+
+#sidebar #tags { float:left; display:inline; width:50%; min-height:300px;}
+#sidebar #archives,
+#sidebar #categories { float:right; display:inline; width:50%; }
+
+#footer { clear:both; }
+#footer ul{ list-style:none; }
+#footer ul li {
+	list-style:none;
+	display:inline;
+	font-size:1em;
+	padding:0 .2em;
+}
+
+/* comments */
+#comments { margin-top: 20px; padding-top: 12px; width:100%; clear: both; }
+#comments .comment-form-comment label,
+#comments .comment-form-author input,
+#comments .comment-form-email input,
+#comments .comment-form-url input {display:block;}
+#comments textarea { width:100% }
+#comments .form-allowed-tags { font-size:.9em; line-height:1em; }
+#comments .reply { margin-bottom:14px; }
+#comments .reply a{ padding:0 5px 0 0; }
+#comments p { margin:10px 0; }
+#comments ul li { padding-top:10px; }
+#comments ul li ul li { border-bottom: none; }
+#comments ul ul { margin-left:2.5em; }
+#comments .commentlist li { list-style:none; padding: 0;}
+
+/* single */
+.post_body { width: 100%; }
+.meta,
+.comment-meta,
+.reply,
+#post_meta { font-size:.9em; }
+.category ul, 
+.meta .tags ul { display:inline; }
+.meta .category ul li,
+.meta .tags ul li { list-style:none; display:inline; }
+.tags ul li a { padding:0 0.2em 0 0.1em; }
+.post .meta .category h2, 
+.post .meta .tags h2 { font-size:1em; font-weight:normal; }
+.post .meta .category, 
+.post .meta  .tags { padding-right:5px;}
+.post .meta .date,
+.post .meta .category,
+.post .meta .tags,
+.post .meta .tags h2,
+.post .meta .tags span a,
+.post .meta .category h2,
+.post .meta .category span a { display:inline }
+
+/* Use this class when content is not required for sighted people, it 
+ * will make content accessible to screen readers */
+.screen_reader {
+	overflow:hidden;
+	left: -9999px;
+    position: absolute;
+}
+/* WordPress standards required */
+.sticky, .gallery-caption, .bypostauthor { padding:0; margin:0; }
