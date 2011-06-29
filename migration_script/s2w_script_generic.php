@@ -4,7 +4,7 @@
  **********************************************************************
  *************************** SELECT FROM SPIP *************************
  * The SPIP installation and the WordPress installation must be on the 
- * same root folder.
+ * same root folder. IMPORTANT: Must do encoding_steps before this.
  * Edit username, password and database below 
  **********************************************************************/
 $link_to_spip = mysql_connect('localhost', 'spip_username', 'spip_password');
@@ -181,8 +181,11 @@ AND
 					";
 $result_spip_categories = mysql_query($query_spip_categories) or die(mysql_error());
 
+/******************************************************/
+/**************** ATTENTION: HARD CODED ***************/
 $term_rows = array('(3,"AccessiVeille","accessiveille")');
 $term_taxonomy_rows = array('(3,3,"category",54)');
+/******************************************************/
 while($cat_row = mysql_fetch_array($result_spip_categories))
 {
 	$term_id 				= $cat_row['id_rubrique'];
@@ -523,7 +526,6 @@ foreach ($term_relationships_rows as $term_relationships_row) {
 mysql_free_result($result_spip_articles);
 mysql_free_result($result_spip_categories);
 mysql_free_result($result_spip_categories_articles);
-mysql_free_result($result_spip_comments);
 mysql_free_result($result_spip_users);
 mysql_close($link_to_spip);
 mysql_close($link_to_wordpress);
