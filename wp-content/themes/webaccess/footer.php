@@ -1,7 +1,7 @@
 <div id="footer">
 	<!-- The h1 element for the footer helps to maintain a proper order of the headers of the page. -->
 	<h1 class="screen_reader"><?php _e('Footer'); ?></h1>
-	<?php 
+	<?php echo do_shortcode( '[contact-form 1 "Contact form 1"]' ); 
 	/*
 	 * 
 	 * echo do_shortcode( '[contact-form 1 "Contact form 1"]' ); 
