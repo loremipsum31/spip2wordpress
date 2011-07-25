@@ -13,7 +13,6 @@
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 				<div class="meta">
 					<span class="date"><?php the_date(); ?></span> <span class="author"><?php _e('by', 'webaccess'); ?> <?php the_author() ?> </span>
-					<span class="date"><?php the_date(); ?></span>
 					<?php if ( comments_open() ) : ?>
 						<span class="comments">
 							<?php 
@@ -40,6 +39,7 @@
 						<span class="edit-link"><a href="<?php echo get_edit_post_link() ?>"><?php _e('Edit the post', 'webaccess'); ?> <em class="screen_reader"><?php the_title(); ?></em></a></span>
 					<?php endif; //end user_logged ?>	
 				</div>
+				<div class="gravatar"><?php echo get_avatar( get_the_author_id(), 50 ); ?></div>
 				<div class="post_excerpt">
 					 <?php the_excerpt(); ?>
 				</div>

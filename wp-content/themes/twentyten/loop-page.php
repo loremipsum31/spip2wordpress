@@ -27,10 +27,12 @@
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
-
-				<?php comments_template( '', true ); ?>
+				<div id="top-right"><?php multieditDisplay('TopRight'); ?></div>
+				<div id="left"><?php multieditDisplay('Left'); ?></div>
+				<div id="middle"><?php multieditDisplay('Middle'); ?></div>
+				<div id="right"><?php multieditDisplay('Right'); ?></div>
+				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 
 <?php endwhile; // end of the loop. ?>

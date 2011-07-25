@@ -24,7 +24,9 @@
 						?> 
 					</span>
 				</div>
-				
+				<div class="gravatar"><?php echo get_avatar( get_the_author_id(), 50 ); ?></div>
+				<div class="tweet"><a href="http://twitter.com/share?url=<?php echo rawurlencode(get_permalink()); ?>" title="<?php _e('Click to share this post on Twitter');?>"><?php _e('Tweet');?></a></div>
+				<div class="like"><a href="http://www.facebook.com/sharer.php?u=<?php echo rawurlencode(get_permalink()); ?>&amp;t=<?php the_title(); ?>" title="<?php _e('Click to share this post on Facebook');?>"><?php _e('Share');?></a></div>				
 				<div class="post_body">
 					<?php the_content(); ?>
 				</div>

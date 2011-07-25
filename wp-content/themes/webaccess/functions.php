@@ -202,6 +202,25 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function the_excerpt_max_charlength($charlength) {
+   $excerpt = get_the_excerpt();
+   $charlength++;
+   if(strlen($excerpt)>$charlength) {
+       $subex = substr($excerpt,0,$charlength-5);
+       $exwords = explode(" ",$subex);
+       $excut = -(strlen($exwords[count($exwords)-1]));
+       if($excut<0) {
+            echo substr($subex,0,$excut);
+       } else {
+       	    echo $subex;
+       }
+       // echo '[&hellip;]';
+       echo ' <a href="'.get_permalink().'">[&hellip;] <span class="screen_reader">'. __('Continue reading the article', 'webaccess').'<em>'. get_the_title().'</em></span></a>';
+   } else {
+	   echo $excerpt;
+   }
+}
+
 /* Removes references to aria-required in the comment form, 
  * page does not validate under XHTML 1.0 Strict otherwise. 
  */
