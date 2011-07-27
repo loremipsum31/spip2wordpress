@@ -80,7 +80,8 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	padding:0 .2em;
 }
 #footer #subfooter-left { float:left; width:60%; }
-#footer #subfooter-left .wpcf7 { float:left; }
+#footer #subfooter-left #contact-info { float:left; }
+#footer #subfooter-left #contact-form { float:right; }
 #footer #subfooter-right { float:right; width:40%;}
 #footer #subfooter-right .twitter ul li { display:list-item; }
 #footer #subfooter-bottom { clear:both;}
