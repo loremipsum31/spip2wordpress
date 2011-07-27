@@ -71,7 +71,7 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 #sidebar #archives,
 #sidebar #categories { float:right; display:inline; width:50%; }
 
-#footer { clear:both; }
+#footer { clear:both; float:none}
 #footer ul{ list-style:none; }
 #footer ul li {
 	list-style:none;
@@ -79,10 +79,10 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
-#footer #subfooter-left { float:left; width:75%; }
-#footer #subfooter-left #contact-info { float:left; }
-#footer #subfooter-left #contact-form { float:right; }
-#footer #subfooter-right { float:right; clear:left; width:25%;}
+#footer #subfooter-left {  }
+#footer #subfooter-left #contact-info { }
+#footer #subfooter-left #contact-form {  }
+#footer #subfooter-right {}
 #footer #subfooter-right .twitter ul li { display:list-item; }
 #footer #subfooter-bottom { clear:both; float:none;}
 
