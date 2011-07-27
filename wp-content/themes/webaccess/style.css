@@ -79,6 +79,33 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
+#footer #subfooter-left { float:left; width:60%; }
+#footer #subfooter-left .wpcf7 { float:left; }
+#footer #subfooter-right { float:right; width:40%;}
+#footer #subfooter-right .twitter ul li { display:list-item; }
+#footer #subfooter-bottom { clear:both;}
+
+#footer #subfooter-left .avertissement a {
+    color: #464A4D;
+    font-size: 0.7em;
+}
+
+#footer #subfooter-left a .msg-icone {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -900%;
+    width: 1px;
+}
+
+#footer #subfooter-left a:focus .msg-icone, 
+#footer #subfooter-left a:hover .msg-icone {
+    display: inline;
+    height: auto;
+    overflow: auto;
+    text-indent: 0;
+    width: auto;
+}
 
 /* comments */
 #comments { margin-top: 20px; padding-top: 12px; width:100%; clear: both; }
