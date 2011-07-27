@@ -79,12 +79,13 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
-#footer #subfooter-left { width:75%; float:left; }
-#footer #subfooter-left #contact-info { float:left; }
+#footer #subfooter-left { width:75%; float:left; display:inline; }
+#footer #subfooter-left #contact-info { float:left; display:inline; }
 #footer #subfooter-left #contact-form {  }
-#footer #subfooter-right { float:right; width:25%;}
-#footer #subfooter-right .twitter ul li { display:list-item; }
+#footer #subfooter-right { float:right; width:25%; display:inline;}
 #footer #subfooter-bottom { clear:both; float:none; }
+
+#footer #subfooter-left #contact-info p { font-size: 0.8em;	}
 
 #footer #subfooter-left .avertissement a {
     color: #464A4D;
@@ -98,14 +99,24 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
     text-indent: -900%;
     width: 1px;
 }
-
+#footer #subfooter-left a:focus,
+#footer #subfooter-left a:hover {
+    text-decoration:none;
+}
 #footer #subfooter-left a:focus .msg-icone, 
 #footer #subfooter-left a:hover .msg-icone {
-    display: inline;
+    display: inline-block;
     height: auto;
     overflow: auto;
     text-indent: 0;
-    width: auto;
+    width: 270px;
+}
+#footer #subfooter-right .twitter li { 
+	font-size: 0.8em; 
+	padding:0; 
+	margin-bottom:10px; 
+	display:list-item; 
+	line-height:1.2em;
 }
 
 /* comments */

@@ -29,8 +29,10 @@
 		</div>
 	 </div>
 	 <div id="subfooter-right">
+		 <img src="<?php bloginfo('template_directory'); ?>/images/twitter.gif" alt=""/>
 		<h2>Twitter Feed</h2>
-		<?php twitter_messages("accessibilitewb", 4, true, false, false, true, true, false); ?>
+		<p>Suivez @AccessibiliteWb sur Twitter!</p>
+		<?php twitter_messages("accessibilitewb", 3, true, false, false, true, true, false); ?>
 		<?php the_widget( 'ALO_Easymail_Widget' ); ?>
 	 </div>
 	 <div id="subfooter-bottom">

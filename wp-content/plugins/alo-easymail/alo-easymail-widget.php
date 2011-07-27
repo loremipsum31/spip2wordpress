@@ -22,19 +22,12 @@ function alo_em_show_widget_form ( ) {
     $lists_table = "";
     if ( $mailinglists ) {
 	    $user_lists = alo_em_get_user_mailinglists ( $subscriber_id );
-	  	$lists_table .= "<div class='alo_easymail_lists_table'>" . $lists_msg .":<br />"; 
-		$lists_table .= "<table><tbody>\n";  
+	  	$lists_table .= "<div class='alo_easymail_lists_table'>" . $lists_msg; 
 		foreach ( $mailinglists as $list => $val ) {
 			$checked = ( $user_lists && in_array ( $list, $user_lists )) ? "checked='checked'" : "";
-			// if registered add js to ajax subscribe/unsubscribe
-			if (is_user_logged_in()) {
-				$checkbox_js = "onchange='alo_em_user_form(\"lists\");'";
-			} else {
-				$checkbox_js = "";
-			}
-			$lists_table .= "<tr><td><input type='checkbox' name='alo_em_form_lists[]' id='alo_em_form_list_$list' value='$list' $checked $checkbox_js class='input-checkbox' /></td><td>" . alo_em_translate_multilangs_array ( alo_em_get_language(), $val['name'], true ) . "</td></tr>\n";
+			$checkbox_js = "";
+			$lists_table .= "<input type='checkbox' name='alo_em_form_lists[]' id='alo_em_form_list_$list' value='$list' $checked $checkbox_js class='input-checkbox' /><label for='alo_em_form_list_$list'>" . alo_em_translate_multilangs_array ( alo_em_get_language(), $val['name'], true ) . "</label>\n";
 		}
-		$lists_table .= "</tbody></table>\n";
 		$lists_table .= "</div>\n";
 	}
 	
@@ -44,61 +37,19 @@ function alo_em_show_widget_form ( ) {
 	$disclaimer_msg	= ( alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_disclaimer_msg',false) !="")? alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_disclaimer_msg',false) : false; 
     $disclaimer_html = ( $disclaimer_msg ) ? "<div class='alo_easymail_disclaimer'>" . $disclaimer_msg . "</div>\n" : ""; 
     	
-	if (is_user_logged_in()) {
-        // For REGISTERED USER
-        if ( $subscriber_id ){
-            $optin_checked = "checked='checked'";            
-            $optout_checked = "";            
-        }
-        else{
-            $optin_checked = "";            
-            $optout_checked = "checked='checked'";            
-        }
-        $optin_msg 	= ( alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_optin_msg',false) !="")? alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_optin_msg',false) : __("Yes, I would like to receive the Newsletter", "alo-easymail");        
-        $optout_msg = ( alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_optout_msg',false) !="")? alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_optout_msg',false) : __("No, please do not email me", "alo-easymail");
-        
-        $html = "<div id='alo_em_widget_loading' class='alo_em_widget_loading' style='display:none;'><img src='".ALO_EM_PLUGIN_URL."/images/wpspin_light.gif' alt='' style='vertical-align:middle' /> ". __("Updating...", "alo-easymail") ."</div>\n";
-        $html .= "<div id='alo_easymail_widget_feedback'></div>\n";
-        $html .= "<h2>Restés connectés!</h2>";
-        $html .= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit consequat felis tristique euismod. Aliquam lacus metus, porta sed rutrum ac, lacinia sed nunc. Pellentesque nec egestas ante.";
-        $html .= "<form name='alo_easymail_widget_form' id='alo_easymail_widget_form' class='alo_easymail_widget_form alo_easymail_widget_form_registered' method='post' action='' >\n"; 
-        $html .= $preform_html;
-        $html .= "<table class='alo_easymail_form_table'>\n";
-        $html .= "  <tr>\n";
-        $html .= "    <td><input onchange='alo_em_user_form(\"yes\");return false;' type='radio' $optin_checked name='alo_easymail_option' value='yes' class='input-radio' /></td>\n";
-        $html .= "    <td>$optin_msg</td>\n";
-        $html .= "  </tr><tr>\n";
-        $html .= "    <td><input onchange='alo_em_user_form(\"no\");return false;' type='radio' $optout_checked name='alo_easymail_option' value='no' class='input-radio' /></td>\n";
-        $html .= "    <td>$optout_msg</td>\n";
-        $html .= "  </tr>\n";
-        $html .= "</table>\n";      
-        $html .= $lists_table; // add lists table 
-        $html .= $disclaimer_html;
-        $html .= "</form>\n";
-        
-    } else {
-        // For NOT-REGISTERED, PUBBLIC SUBSCRIBER
-        $alo_em_opt_name	= ( isset($_POST['alo_em_opt_name']) ) ? stripslashes($_POST['alo_em_opt_name']) : "";
-        $alo_em_opt_email	= ( isset($_POST['alo_em_opt_email']) ) ? stripslashes($_POST['alo_em_opt_email']) : "";
-        $html = "<div id='alo_em_widget_loading' class='alo_em_widget_loading' style='display:none;'><img src='".ALO_EM_PLUGIN_URL."/images/wpspin_light.gif' alt='' style='vertical-align:middle' /> ". __("sending...", "alo-easymail") ."</div>\n";
-        $html .= "<div id='alo_easymail_widget_feedback'></div>\n";
-        $html .= "<form name='alo_easymail_widget_form' id='alo_easymail_widget_form' class='alo_easymail_widget_form alo_easymail_widget_form_public' method='post' action='' onsubmit='alo_em_pubblic_form();return false;'>\n";
-        $html .= $preform_html;        
-        $html .= "<table class='alo_easymail_form_table'><tbody>\n";
-        $html .= "  <tr>\n";
-        $html .= "    <td>".__("Name", "alo-easymail")."</td>";
-        $html .= "    <td><input type='text' name='alo_em_opt_name' value='". $alo_em_opt_name ."' id='opt_name' maxlength='50' class='input-text' /></td>\n";
-        $html .= "  </tr>\n";
-        $html .= "  <tr>\n";
-        $html .= "    <td>".__("E-mail", "alo-easymail")."</td>\n";
-        $html .= "    <td><input type='text' name='alo_em_opt_email' value='". $alo_em_opt_email ."' id='opt_email' maxlength='50' class='input-text' /></td>\n";
-        $html .= "  </tr>\n";
-        $html .= "</tbody></table>\n";        
- 		$html .= $lists_table; // add lists table     
- 		$html .= $disclaimer_html;	
-        $html .= "<input type='submit' name='submit' value='".__("Subscribe", "alo-easymail")."' class='input-submit' />\n";
-        $html .= "</form>\n";    
-    } 
+	$alo_em_opt_email	= ( isset($_POST['alo_em_opt_email']) ) ? stripslashes($_POST['alo_em_opt_email']) : "";
+	$html = "<div id='alo_em_widget_loading' class='alo_em_widget_loading' style='display:none;'><img src='".ALO_EM_PLUGIN_URL."/images/wpspin_light.gif' alt='' style='vertical-align:middle' /> ". __("sending...", "alo-easymail") ."</div>\n";
+	$html .= "<div id='alo_easymail_widget_feedback'></div>\n";
+	$html .= "<h2>".__("Stay Connected", "alo-easymail")."</h2>\n";
+	$html .= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit consequat felis tristique euismod. Aliquam lacus metus, porta sed rutrum ac, lacinia sed nunc.", "alo-easymail");
+	$html .= "<form name='alo_easymail_widget_form' id='alo_easymail_widget_form' class='alo_easymail_widget_form alo_easymail_widget_form_public' method='post' action='' onsubmit='alo_em_pubblic_form();return false;'>\n";
+	$html .= $preform_html;        
+	$html .= "    <label for='opt_email'>".__("I wish to subscribe/unsubscribe", "alo-easymail")."</label>\n";
+	$html .= "    <input type='text' name='alo_em_opt_email' value='' id='opt_email' class='input-text' />\n";      
+	$html .= $lists_table; // add lists table     
+	$html .= $disclaimer_html;	
+	$html .= "<input type='submit' name='submit' value='".__("Subscribe", "alo-easymail")."' class='input-submit' />\n";
+	$html .= "</form>\n";    
     
     // and output it
     return $html;
