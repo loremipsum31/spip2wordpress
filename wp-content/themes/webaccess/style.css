@@ -79,12 +79,12 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
-#footer #subfooter-left { float:left; width:60%; }
+#footer #subfooter-left { float:left; width:75%; }
 #footer #subfooter-left #contact-info { float:left; }
 #footer #subfooter-left #contact-form { float:right; }
-#footer #subfooter-right { float:right; width:40%;}
+#footer #subfooter-right { float:right; width:25%;}
 #footer #subfooter-right .twitter ul li { display:list-item; }
-#footer #subfooter-bottom { clear:both;}
+#footer #subfooter-bottom { clear:both; float:none;}
 
 #footer #subfooter-left .avertissement a {
     color: #464A4D;
