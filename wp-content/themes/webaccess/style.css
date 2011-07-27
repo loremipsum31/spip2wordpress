@@ -87,6 +87,12 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 
 #footer #subfooter-left #contact-info p { font-size: 0.8em;	}
 
+#footer #subfooter-left .avertissement {
+	height:40px;
+}
+#footer #subfooter-left .avertissement img{
+	vertical-align: top;
+}
 #footer #subfooter-left .avertissement a {
     color: #464A4D;
     font-size: 0.7em;
