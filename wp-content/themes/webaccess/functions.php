@@ -11,6 +11,8 @@ if ( ! isset( $content_width ) ) $content_width = 800;
 
 add_theme_support('automatic-feed-links');
 
+add_theme_support( 'post-thumbnails' );
+
 /* Add callback for custom TinyMCE editor stylesheets. */
 add_editor_style('css/editor.css');
 

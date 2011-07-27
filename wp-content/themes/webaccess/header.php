@@ -44,21 +44,18 @@
 		<div id="sitename">
 			<!-- The h1 element is used for both site title and page site.  -->
 			<h1>
-				<!-- for qtranslate 
-				replace 
-				echo get_settings("home"); 
-				with 
-				echo get_settings("home").'/'.qtrans_getLanguage(); 
-				-->
 				<a href="<?php echo get_settings('home'); ?>">
 					<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name');?> logo" />
 				</a>
 			</h1>
 		</div>
-		<?php if (get_bloginfo('description')) :  ?>
+		<?php if ( get_bloginfo( 'description' ) ) :  ?>
 			<p id="sitedescription"><?php bloginfo( 'description' ); ?></p>
 		<?php endif; ?>
-			<div id="search">
-		<?php get_search_form(); ?>
-	</div>
+		<?php /* if ( is_front_page() && current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $post->ID ) ) :
+			echo get_the_post_thumbnail( $post->ID );
+		endif; */ ?>
+		<div id="search">
+			<?php get_search_form(); ?>
+		</div>
 	</div>
