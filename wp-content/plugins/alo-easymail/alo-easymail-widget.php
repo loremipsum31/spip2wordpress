@@ -22,13 +22,13 @@ function alo_em_show_widget_form ( ) {
     $lists_table = "";
     if ( $mailinglists ) {
 	    $user_lists = alo_em_get_user_mailinglists ( $subscriber_id );
-	  	$lists_table .= "<div class='alo_easymail_lists_table'>" . $lists_msg; 
+	  	$lists_table .= "<div class='alo_easymail_lists_table'>" . $lists_msg ."<div id='newsletters'>"; 
 		foreach ( $mailinglists as $list => $val ) {
 			$checked = ( $user_lists && in_array ( $list, $user_lists )) ? "checked='checked'" : "";
 			$checkbox_js = "";
 			$lists_table .= "<input type='checkbox' name='alo_em_form_lists[]' id='alo_em_form_list_$list' value='$list' $checked $checkbox_js class='input-checkbox' /><label for='alo_em_form_list_$list'>" . alo_em_translate_multilangs_array ( alo_em_get_language(), $val['name'], true ) . "</label>\n";
 		}
-		$lists_table .= "</div>\n";
+		$lists_table .= "</div></div>\n";
 	}
 	
 	$preform_msg	= ( alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_preform_msg',false) !="")? alo_em_translate_option ( alo_em_get_language (), 'alo_em_custom_preform_msg',false) : false; 

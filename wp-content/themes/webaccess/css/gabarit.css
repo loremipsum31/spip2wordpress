@@ -1,6 +1,6 @@
 #middle.custom #content { width:100%; margin-right:0; padding:0  }
 
-#middle.custom #content .page { float:left; display: inline; width: 60%;}
+#middle.custom #content .page { float:left; display: inline; width: 66%;}
 
 /* Multi Edit blocks */
 #middle.custom #content #top-right { display: inline; }
@@ -8,18 +8,18 @@
 .home #middle.custom #content #left-block { 
 	clear: both;
     float: left;
-    width: 250px;
+    width: 30%;
     padding:0 20px 0 0;
     display: inline;
 }
 .home  #middle.custom #content #middle-block { 
-	width:250px; 
+	width:30%;
 	padding:0 10px; 
 	float:left; 
 	display: inline;
 }
 .home #middle.custom #content #right-block { 
-	width:240px; 
+	width:30%;
 	padding:0 0 0 10px; 
 	float:left; 
 	display: inline; 

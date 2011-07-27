@@ -36,7 +36,7 @@ get_header(); ?>
 						</div>
 				<?php endforeach; ?>					
 				</div><!-- end latest posts --> 
-				<div><a href="/accessiblogue/">Consulter notre blogue</a></div>
+				<div><a href="<?php bloginfo('siteurl'); ?>/accessiblogue/">Consulter notre blogue</a></div>
 				<div><?php multieditDisplay('Right'); ?></div>
 				
 			</div>
