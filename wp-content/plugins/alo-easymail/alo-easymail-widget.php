@@ -59,6 +59,7 @@ function alo_em_show_widget_form ( ) {
         
         $html = "<div id='alo_em_widget_loading' class='alo_em_widget_loading' style='display:none;'><img src='".ALO_EM_PLUGIN_URL."/images/wpspin_light.gif' alt='' style='vertical-align:middle' /> ". __("Updating...", "alo-easymail") ."</div>\n";
         $html .= "<div id='alo_easymail_widget_feedback'></div>\n";
+        $html .= "<h2>Restés connectés!</h2>";
         $html .= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit consequat felis tristique euismod. Aliquam lacus metus, porta sed rutrum ac, lacinia sed nunc. Pellentesque nec egestas ante.";
         $html .= "<form name='alo_easymail_widget_form' id='alo_easymail_widget_form' class='alo_easymail_widget_form alo_easymail_widget_form_registered' method='post' action='' >\n"; 
         $html .= $preform_html;

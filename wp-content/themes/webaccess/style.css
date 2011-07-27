@@ -79,7 +79,7 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
-#footer #subfooter-left { width:75%; }
+#footer #subfooter-left { width:75%; float:left; }
 #footer #subfooter-left #contact-info { float:left; }
 #footer #subfooter-left #contact-form {  }
 #footer #subfooter-right { float:right; width:25%;}
