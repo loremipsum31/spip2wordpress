@@ -2,6 +2,7 @@
 	<!-- The h1 element for the footer helps to maintain a proper order of the headers of the page. -->
 	<h1 class="screen_reader"><?php _e('Footer'); ?></h1>
 	<div id="subfooter-left">
+		<div id="contact-info">
 			<h2>Contactez-nous!</h2>
 			<p>
 			Coopérative AccessibilitéWeb<br />
@@ -22,7 +23,10 @@
 				<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572&amp;output=embed"></iframe>
 				<!--<a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572"></a>-->
 			</div>
-		<?php // echo do_shortcode( '[contact-form 1 "Contact form 1"]' ); ?>
+		</div>
+		<div id="contact-form">	
+			<?php echo do_shortcode( '[contact-form 1 "Contact form 1"]' ); ?>
+		</div>
 	 </div>
 	 <div id="subfooter-right">
 		<h2>Twitter Feed</h2>
