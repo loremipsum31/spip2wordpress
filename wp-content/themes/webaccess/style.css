@@ -82,7 +82,7 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 #footer #subfooter-left { float:left; width:75%; }
 #footer #subfooter-left #contact-info { float:left; }
 #footer #subfooter-left #contact-form { float:right; }
-#footer #subfooter-right { float:right; width:25%;}
+#footer #subfooter-right { float:right; clear:left; width:25%;}
 #footer #subfooter-right .twitter ul li { display:list-item; }
 #footer #subfooter-bottom { clear:both; float:none;}
 
