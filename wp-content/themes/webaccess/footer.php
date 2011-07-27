@@ -20,8 +20,8 @@
 					<span class="msg-icone"><?php _e('Consultez la page <em>Accessibilité</em> pour plus d’information sur les contenus non conformes', 'webaccess'); ?></span>
 				</a>
 				</div>	
-				<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572&amp;output=embed"></iframe>
-				<!--<a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572"></a>-->
+				<!--<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572&amp;output=embed"></iframe>
+				<a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Accessibilit%C3%A9Web,+Montreal,+QC&amp;aq=0&amp;sll=45.484101,-73.561932&amp;sspn=0.007432,0.01929&amp;g=1751+Rue+Richardson,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec+H3K+1G5&amp;ie=UTF8&amp;hq=Accessibilit%C3%A9Web,&amp;hnear=Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&amp;ll=45.483981,-73.562154&amp;spn=0.054797,0.017572"></a>-->
 			</div>
 		</div>
 		<div id="contact-form">
@@ -30,7 +30,7 @@
 	 </div>
 	 <div id="subfooter-right">
 		<h2>Twitter Feed</h2>
-		<?php twitter_messages("accessibilitewb", 4, true, false, false, true, true, false); ?>
+		<?php /*twitter_messages("accessibilitewb", 4, true, false, false, true, true, false); */?>
 		<?php /* the_widget( 'ALO_Easymail_Widget' ); */ ?>
 	 </div>
 	 <div id="subfooter-bottom">

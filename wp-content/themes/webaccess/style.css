@@ -84,7 +84,7 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 #footer #subfooter-left #contact-form {  }
 #footer #subfooter-right {}
 #footer #subfooter-right .twitter ul li { display:list-item; }
-#footer #subfooter-bottom { clear:both; float:none;}
+#footer #subfooter-bottom { }
 
 #footer #subfooter-left .avertissement a {
     color: #464A4D;
