@@ -146,6 +146,8 @@ px      68    160    252    */
 		width: 252px;
 		padding: 48px 34px 60px;
 	}
+	#content { margin-right: 0; }
+	#sidebar { clear: left; margin-left: 0; width: 100%; }
 	.home #middle.custom #content #right-block,
 	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
@@ -174,7 +176,6 @@ px      68    160    252    */
 	}
 	
 }
-
 
 
 /*		Wide Mobile Layout: 480px.
@@ -222,6 +223,8 @@ px      68    160    252    344    436    */
 	body {
 	
 	}
+	#content { margin-right: 0; }
+	#sidebar { clear: left; margin-left: 0; width: 100%; }
 	.home #middle.custom #content #right-block,
 	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
