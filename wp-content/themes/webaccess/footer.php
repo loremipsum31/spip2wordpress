@@ -28,8 +28,8 @@
 	</div>
 	 <div id="subfooter-right">
 		 <img src="<?php bloginfo('template_directory'); ?>/images/twitter.gif" alt=""/>
-		<h2>Twitter Feed</h2>
-		<p>Suivez @AccessibiliteWb sur Twitter!</p>
+		<h2><?php _e('Twitter Feed', 'webaccess'); ?></h2>
+		<p><?php _e('Follow us on Twitter @AccessibiliteWb', 'webaccess'); ?></p>
 		<?php twitter_messages("accessibilitewb", 3, true, false, false, true, true, false); ?>
 		<div id="opt-in">
 			<h2><?php _e('Stay Connected', 'webaccess'); ?></h2>
