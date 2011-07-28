@@ -95,7 +95,7 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 }
 #footer input, 
 #footer textarea {
-	width: 180px;
+	width: 250px;
 }
 
 #footer #subfooter-left a .msg-icone {
