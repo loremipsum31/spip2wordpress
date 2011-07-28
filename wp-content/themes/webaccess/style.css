@@ -93,6 +93,10 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
     color: #464A4D;
     font-size: 0.7em;
 }
+#footer input, 
+#footer textarea {
+	width: 180px;
+}
 
 #footer #subfooter-left a .msg-icone {
     display: block;

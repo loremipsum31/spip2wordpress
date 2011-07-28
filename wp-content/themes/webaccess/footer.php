@@ -31,7 +31,7 @@
 		<h2>Twitter Feed</h2>
 		<p>Suivez @AccessibiliteWb sur Twitter!</p>
 		<?php twitter_messages("accessibilitewb", 3, true, false, false, true, true, false); ?>
-		<?php if ( class_exists( 'MailPress' ) ) MailPress ::form( array( 'txtbutton' => '_e( "Stay Connected", "webaccess" )' ) ); ?> 
+		<?php if ( class_exists( 'MailPress' ) ) MailPress ::form( array( 'txtbutton' => _e( 'Stay Connected', 'webaccess' ) ) ); ?> 
 	 </div>
 	 <div id="subfooter-bottom">
 		 <p>&copy; Coopérative AccessibilitéWeb, 2006-<?php echo date('Y'); ?>. Sous licence <a href="http://creativecommons.org/licenses/by-nd/3.0/deed.fr_CA" hreflang="fr_CA" lang="en_CA">Creative Commons BY-ND</a>. <a href="/accessibilite"><?php _e('Accessibility', 'webaccess'); ?></a> <a href="/plan-du-site"><?php _e('Site Map', 'webaccess'); ?></a></p>
