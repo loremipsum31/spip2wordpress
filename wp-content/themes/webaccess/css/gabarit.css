@@ -1,24 +1,32 @@
-#middle.custom #content { width:100%; margin-right:0; padding:0  }
+#middle.custom #content,
+#footer {
+	width:100%; 
+	margin-right:0; 
+	padding:0  
+}
 
 #middle.custom #content .page { float:left; display: inline; width: 66%;}
 
 /* Multi Edit blocks */
 #middle.custom #content #top-right { display: inline; }
 
-.home #middle.custom #content #left-block { 
+.home #middle.custom #content #left-block,
+#footer #subfooter-left { 
 	clear: both;
     float: left;
     width: 30%;
     padding:0 20px 0 0;
     display: inline;
 }
-.home  #middle.custom #content #middle-block { 
+.home  #middle.custom #content #middle-block,
+#footer #subfooter-middle { 
 	width:30%;
 	padding:0 10px; 
 	float:left; 
 	display: inline;
 }
-.home #middle.custom #content #right-block { 
+.home #middle.custom #content #right-block,
+#footer #subfooter-right  { 
 	width:30%;
 	padding:0 0 0 10px; 
 	float:left; 

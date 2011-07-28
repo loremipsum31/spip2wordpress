@@ -79,10 +79,6 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 	font-size:1em;
 	padding:0 .2em;
 }
-#footer #subfooter-left { width:66%; float:left; display:inline; }
-#footer #subfooter-left #contact-info { float:left; display:inline; }
-#footer #subfooter-left #contact-form { float:left; display:inline; width:50%; }
-#footer #subfooter-right { float:left; width:30%; display:inline; position: relative; }
 #footer #subfooter-bottom { clear:both; float:none; }
 
 #footer #subfooter-left #contact-info p { font-size: 0.8em;	}

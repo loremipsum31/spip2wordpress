@@ -112,15 +112,21 @@ px      68    160    252    344    436    528    620    712    */
 		padding: 48px 28px 60px;
 	}
 	.home #middle.custom #content #right-block,
+	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
+	top: 0;
+	width:100%;
 	}
 	.home #middle.custom #content #left-block,
+	#footer #subfooter-left, 
 	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
+	#footer #subfooter-middle,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;
+	width:45%;
 	}
 }
 
@@ -141,16 +147,23 @@ px      68    160    252    */
 		padding: 48px 34px 60px;
 	}
 	.home #middle.custom #content #right-block,
+	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
 		clear:left;
 		padding:0;
+		top: 0;
+		width:100%;
 	}
 	.home #middle.custom #content #left-block,
+	#footer #subfooter-left, 
 	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
+	#footer #subfooter-middle,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 		top: 0;
 		padding:0;
+		clear:left;
+		width:100%;
 	}
 	#sidebar {
 		float: none;
@@ -179,13 +192,17 @@ px      68    160    252    344    436    */
 		padding: 36px 22px 48px;
 	}
 	.home #middle.custom #content #right-block,
+	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
+	top: 0;
 	}
 	.home #middle.custom #content #left-block,
+	#footer #subfooter-left, 
 	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
+	#footer #subfooter-middle,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;
 	padding:0;
@@ -206,16 +223,23 @@ px      68    160    252    344    436    */
 	
 	}
 	.home #middle.custom #content #right-block,
+	#footer #subfooter-right,
 	.page-template-custom-page-php #middle.custom #content #right-block  {
 	clear:left;
 	padding:0;
+	top: 0;
+	width:100%;
 	}
 	.home #middle.custom #content #left-block,
+	#footer #subfooter-left, 
 	.page-template-custom-page-php #middle.custom #content #left-block,
 	.home #middle.custom #content #middle-block,
+	#footer #subfooter-middle,
 	.page-template-custom-page-php #middle.custom #content #middle-block{
 	top: 0;
 	padding:0;
+	clear:left;
+	width:100%;
 	}
 	
 }
