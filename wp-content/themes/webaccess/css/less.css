@@ -128,6 +128,7 @@ px      68    160    252    344    436    528    620    712    */
 	top: 0;
 	width:45%;
 	}
+	#middle.custom #content #top-right { position:inherit; }
 }
 
 
@@ -174,6 +175,7 @@ px      68    160    252    */
 	#content {
 		margin-right: 0;
 	}
+	#middle.custom #content #top-right { position:inherit; }
 	
 }
 
@@ -208,6 +210,7 @@ px      68    160    252    344    436    */
 	top: 0;
 	padding:0;
 	}
+	#middle.custom #content #top-right { position:inherit; }
 }
 
 
@@ -244,5 +247,5 @@ px      68    160    252    344    436    */
 	clear:left;
 	width:100%;
 	}
-	
+	#middle.custom #content #top-right { position:inherit; }
 }

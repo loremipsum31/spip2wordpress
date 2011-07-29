@@ -8,7 +8,7 @@
 #middle.custom #content .page { float:left; display: inline; width: 66%;}
 
 /* Multi Edit blocks */
-#middle.custom #content #top-right { display: inline; position:absolute;  }
+#middle.custom #content #top-right { display: inline; position:absolute; }
 
 .home #middle.custom #content #left-block,
 #footer #subfooter-left { 
@@ -54,7 +54,7 @@
 	float:left; 
 	display: inline;
 	position: relative;
-    top: -20px;
+    top: 110px;
 }
 
 .home .edit-link,
