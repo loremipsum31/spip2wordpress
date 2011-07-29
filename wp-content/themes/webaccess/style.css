@@ -56,11 +56,11 @@ blockquote { border: 1px dashed #aaa; margin: 0 4em; padding: 0 10px; }
 }
 
 #middle { float: left; width:100%; }
-#content { margin-right: 24em; }
+#content { margin-right: 22em; }
 #content p, #content li { line-height: 1.4em; }
 #content h2 { margin: 14px 0 7px;}
 
-#sidebar { float: left; margin-left: -25em; width: 24.8em;  font-size:0.9em; }
+#sidebar { float: left; margin-left: -23em; width: 22.8em;  font-size:0.9em; }
 #sidebar #search { margin-bottom:20px; }
 #sidebar input[type=text] { width: 80%; }
 #sidebar .title { font-weight:bold; margin:20px 0 5px 0; font-size:1.2em; }
